@@ -6,6 +6,7 @@ use yii\base\Behavior;
 use yii\base\Model;
 use yii\base\UnknownPropertyException;
 use yii\behaviors\TimestampBehavior as YiiTimestampBehavior;
+use yii\db\ActiveRecord;
 use yii\db\BaseActiveRecord;
 use yii\db\Expression;
 use yii\helpers\ArrayHelper;
@@ -127,7 +128,7 @@ class JsonBehavior extends Behavior
         $owner = $this->owner;
 
         foreach($this->jsonAttributes as $jsonAttribute => $attributes) {
-            $owner->{$jsonAttribute} = ArrayHelper::merge($owner->{$jsonAttribute}, $attributes);
+            $owner->{$jsonAttribute} = ArrayHelper::merge($attributes, $owner->{$jsonAttribute} ?? []);
         }
     }
 }
