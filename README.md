@@ -30,9 +30,16 @@ public function behaviors(): array
         [
             JsonConfigurationBehavior::class => [
                 'class' => JsonConfigurationBehavior::class,
-                '<jsonAttribute>' => [
-                    '<attribute>' => '<defaultValue>'
-                ] 
+                'jsonAttributes' => [
+                    '<jsonAttribute>' => [
+                        '<attribute>' => '<defaultValue>'
+                        '<attribute2>' => '<defaultValue2>'
+                    ],
+                    '<jsonAttribute2>' => [
+                        '<attribute3>' => '<defaultValue3>'
+                        '<attribute4>' => '<defaultValue4>'
+                    ] 
+                ]
             ],
         ]
     );
