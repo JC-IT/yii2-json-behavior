@@ -1,0 +1,28 @@
+{
+    "name": "jc-it/yii2-json-behavior",
+    "description": "JSON behavior for Yii2 that adds magic attributes. Ideal for single table inheritance.",
+    "type": "library",
+    "require": {
+        "php": ">=7.1.0",
+
+        "yiisoft/yii2": "~2.0.19"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joey Claessen",
+            "email": "joey_claessen@hotmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JCIT\\": ["src/"]
+        }
+    }
+}
